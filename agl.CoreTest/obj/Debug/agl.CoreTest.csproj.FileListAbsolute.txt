@@ -1,0 +1,13 @@
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\agl.CoreTest.dll
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\agl.CoreTest.pdb
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\agl.Core.dll
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\agl.Core.pdb
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\obj\Debug\agl.CoreTest.csprojResolveAssemblyReference.cache
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\obj\Debug\agl.CoreTest.dll
+C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.CoreTest\obj\Debug\agl.CoreTest.pdb
