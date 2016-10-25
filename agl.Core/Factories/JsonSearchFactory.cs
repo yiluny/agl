@@ -10,21 +10,26 @@ namespace agl.Core.Factories
 {
     public class JsonSearchFactory : ISearch<Person>
     {
-        private string jsonStrDataSourceUrl = "http://agl-developer-test.azurewebsites.net/people.json";
+        private string _jsonStrDataSourceUrl;
+
+        public JsonSearchFactory(string jsonStrDataSourceUrl = "http://agl-developer-test.azurewebsites.net/people.json")
+        {
+            _jsonStrDataSourceUrl = jsonStrDataSourceUrl;
+        }
 
         public List<string> GetSearchStringResultsByGender(List<Person> data, string gender)
         {
-            if (data == null || string.IsNullOrWhiteSpace(gender))
+            List<string> searchedData = new List<string>();
+            if (data != null && !string.IsNullOrWhiteSpace(gender))
             {
-                return null;
-            }
-
-            List<string> searchedData = data.Where(p => p.Gender.ToLower() == gender && p.Pets != null)
+                searchedData = data.Where(p => p.Gender.ToLower().Equals(gender) && p.Pets != null)
                                             .SelectMany(p => p.Pets)
-                                            .Where(pet => pet.Type == AnimalType.cat)
+                                            .Where(pet => pet.Type.Equals(AnimalType.cat))
                                             .Select(pet => pet.Name)
                                             .OrderBy(k => k)
                                             .ToList();
+            }
+
             return searchedData;
         }
 
@@ -33,18 +38,18 @@ namespace agl.Core.Factories
             HttpClient client = new HttpClient();
             string jsonStr = string.Empty;
 
-            jsonStr = await client.GetStringAsync(jsonStrDataSourceUrl);
+            jsonStr = await client.GetStringAsync(_jsonStrDataSourceUrl);
             return jsonStr;
         }
 
         public List<Person> Transform(string dataSource)
         {
-            if (string.IsNullOrWhiteSpace(dataSource))
+            List<Person> dataList = new List<Person>();
+            if (!string.IsNullOrWhiteSpace(dataSource))
             {
-                return null;
+                dataList = JsonConvert.DeserializeObject<List<Person>>(dataSource);
             }
 
-            List<Person> dataList = JsonConvert.DeserializeObject<List<Person>>(dataSource);
             return dataList;
         }
     }

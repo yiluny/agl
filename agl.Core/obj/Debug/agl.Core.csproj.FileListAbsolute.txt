@@ -5,3 +5,10 @@ C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\bin\De
 C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\obj\Debug\agl.Core.dll
 C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\obj\Debug\agl.Core.pdb
 C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\obj\Debug\agl.Core.csprojResolveAssemblyReference.cache
+C:\Projects\agl\agl.Core\bin\Debug\agl.Core.dll
+C:\Projects\agl\agl.Core\bin\Debug\agl.Core.pdb
+C:\Projects\agl\agl.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\agl\agl.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\agl\agl.Core\obj\Debug\agl.Core.csprojResolveAssemblyReference.cache
+C:\Projects\agl\agl.Core\obj\Debug\agl.Core.dll
+C:\Projects\agl\agl.Core\obj\Debug\agl.Core.pdb

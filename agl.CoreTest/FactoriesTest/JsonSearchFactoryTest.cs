@@ -16,8 +16,7 @@ namespace agl.CoreTest.FactoriesTest
         [TestMethod]
         public async Task GetSearchStringResultsByGenderAsyncTest()
         {
-            Task<string> jsonStr = _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
-            string jsonStrResult = await jsonStr;
+            var jsonStrResult = await _jsonSearchFactory.GetStringFormatFromDataSourceAsync() ;
 
             List<Person> data = _jsonSearchFactory.Transform(jsonStrResult);
             List<string> cats = _jsonSearchFactory.GetSearchStringResultsByGender(data, "male");
@@ -29,9 +28,7 @@ namespace agl.CoreTest.FactoriesTest
         [TestMethod]
         public async Task GetStringFormatFromDataSourceAsyncTest()
         {
-            Task<string> jsonStr = _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
-
-            string jsonStrResult = await jsonStr;
+            var jsonStrResult = await _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
 
             Assert.IsNotNull(jsonStrResult);
         }
@@ -39,8 +36,7 @@ namespace agl.CoreTest.FactoriesTest
         [TestMethod]
         public async Task DataTransformAsyncTest()
         {
-            Task<string> jsonStr = _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
-            string jsonStrResult = await jsonStr;
+            string jsonStrResult = await _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
 
             List<Person> data = _jsonSearchFactory.Transform(jsonStrResult);
 
