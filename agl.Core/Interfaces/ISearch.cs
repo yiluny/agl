@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace agl.Core.Interfaces
+namespace AGL.Core.Interfaces
 {
     public interface ISearch<T>
     {

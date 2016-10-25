@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace agl.Core.Models
+namespace AGL.Core.Models
 {
     [JsonObject]
     public class Pet

@@ -1,12 +1,12 @@
-﻿using agl.Core.Factories;
-using agl.Core.Interfaces;
-using agl.Core.Models;
+﻿using AGL.Core.Factories;
+using AGL.Core.Interfaces;
+using AGL.Core.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace agl.CoreTest.FactoriesTest
+namespace AGL.CoreTest.FactoriesTest
 {
     [TestClass]
     public class JsonSearchFactoryTest
@@ -17,31 +17,41 @@ namespace agl.CoreTest.FactoriesTest
         public async Task GetSearchStringResultsByGenderAsyncTest()
         {
             var jsonStrResult = await _jsonSearchFactory.GetStringFormatFromDataSourceAsync() ;
-
-            List<Person> data = _jsonSearchFactory.Transform(jsonStrResult);
-            List<string> cats = _jsonSearchFactory.GetSearchStringResultsByGender(data, "male");
-
+            var data = _jsonSearchFactory.Transform(jsonStrResult);
+            var cats = _jsonSearchFactory.GetSearchStringResultsByGender(data, "male");
             Assert.IsNotNull(data);
             Assert.IsTrue(data.Any());
+            Assert.AreEqual(cats.Count, 4);
+        }
+
+        [TestMethod]
+        public void GetSearchStringResultsByGenderAsyncWhenDataSourceIsMissingTest()
+        {
+            var cats = _jsonSearchFactory.GetSearchStringResultsByGender(null, "male");
+            Assert.AreEqual(cats.Count,0);
         }
 
         [TestMethod]
         public async Task GetStringFormatFromDataSourceAsyncTest()
         {
             var jsonStrResult = await _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
-
             Assert.IsNotNull(jsonStrResult);
         }
 
         [TestMethod]
         public async Task DataTransformAsyncTest()
         {
-            string jsonStrResult = await _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
-
-            List<Person> data = _jsonSearchFactory.Transform(jsonStrResult);
-
+            var jsonStrResult = await _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
+            var data = _jsonSearchFactory.Transform(jsonStrResult);
             Assert.IsNotNull(data);
             Assert.IsTrue(data.Any());
+        }
+
+        [TestMethod]
+        public void DataTransformWhenDataSourceIsNullAsyncTest()
+        {
+            var data = _jsonSearchFactory.Transform(string.Empty);
+            Assert.AreEqual(data.Count,0);
         }
     }
 }

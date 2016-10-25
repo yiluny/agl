@@ -1,20 +1,17 @@
-﻿using agl.Core.Factories;
-using agl.Core.Interfaces;
-using agl.Core.Models;
-using agl.MvcSite.Models;
-using agl.MvcSite.Services;
-using System;
+﻿using AGL.Core.Factories;
+using AGL.Core.Interfaces;
+using AGL.Core.Models;
+using AGL.MvcSite.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
-namespace agl.MvcSite.Controllers
+namespace AGL.MvcSite.Controllers
 {
     public class HomeController : Controller
     {
         private ISearch<Person> _jsonSearchFactory = new JsonSearchFactory();
+
         // GET: Home
         public async Task<ActionResult> Index()
         {

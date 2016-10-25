@@ -1,12 +1,12 @@
-﻿using agl.Core.Interfaces;
-using agl.Core.Models;
+﻿using AGL.Core.Interfaces;
+using AGL.Core.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace agl.Core.Factories
+namespace AGL.Core.Factories
 {
     public class JsonSearchFactory : ISearch<Person>
     {

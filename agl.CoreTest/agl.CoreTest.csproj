@@ -61,9 +61,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\agl.Core\agl.Core.csproj">
+    <ProjectReference Include="..\agl.Core\AGL.Core.csproj">
       <Project>{acd1c73b-e64e-4a72-bef6-5154be4299e1}</Project>
-      <Name>agl.Core</Name>
+      <Name>AGL.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace agl.Core.Models
+namespace AGL.Core.Models
 {
     [JsonObject]
     public class Person

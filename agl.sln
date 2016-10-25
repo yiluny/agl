@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "agl.Core", "agl.Core\agl.Core.csproj", "{ACD1C73B-E64E-4A72-BEF6-5154BE4299E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.Core", "agl.Core\AGL.Core.csproj", "{ACD1C73B-E64E-4A72-BEF6-5154BE4299E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "agl.CoreTest", "agl.CoreTest\agl.CoreTest.csproj", "{EBD0E679-BD2D-4EA2-9B18-27657CCBA63F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.CoreTest", "agl.CoreTest\AGL.CoreTest.csproj", "{EBD0E679-BD2D-4EA2-9B18-27657CCBA63F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "agl.MvcSite", "agl.MvcSite\agl.MvcSite.csproj", "{431A2E81-85FB-4236-AC52-D7A8EDA04268}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.MvcSite", "agl.MvcSite\AGL.MvcSite.csproj", "{431A2E81-85FB-4236-AC52-D7A8EDA04268}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

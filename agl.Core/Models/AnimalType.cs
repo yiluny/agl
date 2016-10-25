@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace agl.Core.Models
+namespace AGL.Core.Models
 {
     public enum AnimalType
     {

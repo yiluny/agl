@@ -148,7 +148,6 @@
     </Compile>
     <Compile Include="Models\CatListResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\JsonStringSearchService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -171,9 +170,9 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\agl.Core\agl.Core.csproj">
+    <ProjectReference Include="..\agl.Core\AGL.Core.csproj">
       <Project>{acd1c73b-e64e-4a72-bef6-5154be4299e1}</Project>
-      <Name>agl.Core</Name>
+      <Name>AGL.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
