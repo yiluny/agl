@@ -1,7 +1,0 @@
-C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\bin\Debug\agl.Core.dll
-C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\bin\Debug\agl.Core.pdb
-C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\bin\Debug\Newtonsoft.Json.dll
-C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\bin\Debug\Newtonsoft.Json.xml
-C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\obj\Debug\agl.Core.dll
-C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\obj\Debug\agl.Core.pdb
-C:\Users\yyang\documents\visual studio 2015\Projects\agl.Website\agl.Core\obj\Debug\agl.Core.csprojResolveAssemblyReference.cache
