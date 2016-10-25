@@ -19,10 +19,10 @@ namespace AGL.Core.Factories
 
         public List<string> GetSearchStringResultsByGender(List<Person> data, string gender)
         {
-            List<string> searchedData = new List<string>();
+            var result = new List<string>();
             if (data != null && !string.IsNullOrWhiteSpace(gender))
             {
-                searchedData = data.Where(p => p.Gender.ToLower().Equals(gender) && p.Pets != null)
+                result = data.Where(p => p.Gender.ToLower().Equals(gender) && p.Pets != null)
                                             .SelectMany(p => p.Pets)
                                             .Where(pet => pet.Type.Equals(AnimalType.cat))
                                             .Select(pet => pet.Name)
@@ -30,27 +30,22 @@ namespace AGL.Core.Factories
                                             .ToList();
             }
 
-            return searchedData;
+            return result;
         }
 
         public async Task<string> GetStringFormatFromDataSourceAsync()
         {
-            HttpClient client = new HttpClient();
-            string jsonStr = string.Empty;
-
-            jsonStr = await client.GetStringAsync(_jsonStrDataSourceUrl);
-            return jsonStr;
+            var result = string.Empty;
+            result = await (new HttpClient()).GetStringAsync(_jsonStrDataSourceUrl);
+            return result;
         }
 
         public List<Person> Transform(string dataSource)
         {
-            List<Person> dataList = new List<Person>();
-            if (!string.IsNullOrWhiteSpace(dataSource))
-            {
-                dataList = JsonConvert.DeserializeObject<List<Person>>(dataSource);
-            }
-
-            return dataList;
+            var result = !string.IsNullOrWhiteSpace(dataSource) ? 
+                            JsonConvert.DeserializeObject<List<Person>>(dataSource) 
+                            : new List<Person>();
+            return result;
         }
     }
 }

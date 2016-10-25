@@ -15,14 +15,14 @@ namespace AGL.MvcSite.Controllers
         // GET: Home
         public async Task<ActionResult> Index()
         {
-            string jsonStr = await _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
-            List<Person> dataList = _jsonSearchFactory.Transform(jsonStr);
-            CatListResponse res = new CatListResponse()
+            var jsonStr = await _jsonSearchFactory.GetStringFormatFromDataSourceAsync();
+            var dataList = _jsonSearchFactory.Transform(jsonStr);
+            var result = new CatListResponse()
             {
                 MaleOwnerCats = _jsonSearchFactory.GetSearchStringResultsByGender(dataList, "male"),
                 FemaleOwnerCats = _jsonSearchFactory.GetSearchStringResultsByGender(dataList, "female"),
             };
-            return View(res);
+            return View(result);
         }
     }
 }
