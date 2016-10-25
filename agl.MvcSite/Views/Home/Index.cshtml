@@ -1,0 +1,19 @@
+﻿@model agl.MvcSite.Models.CatListResponse
+
+@{
+    ViewBag.Title = "Index";
+}
+@helper PrintCatList(List<string> catList, string ownerGenderText)
+{
+    <h3>@ownerGenderText</h3>
+    <ul>
+        @foreach (var cat in catList)
+        {
+            <li>@cat</li>
+        }
+    </ul>
+}
+<h2>Index</h2>
+
+@PrintCatList(Model.MaleOwnerCats, "Male")
+@PrintCatList(Model.FemaleOwnerCats, "Female")
